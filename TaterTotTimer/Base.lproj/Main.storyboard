@@ -16,22 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="200" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-ol-jWm">
-                                <rect key="frame" x="253" y="130" width="94" height="29"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="200" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-ol-jWm">
+                                <rect key="frame" x="253" y="129" width="94" height="29"/>
                                 <animations/>
                                 <connections>
                                     <action selector="changeTotValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gut-FV-dhO"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Tots:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Av-Eb-r3l">
-                                <rect key="frame" x="238" y="72" width="124" height="21"/>
+                                <rect key="frame" x="238" y="72" width="123.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-Qm-DCK">
-                                <rect key="frame" x="289" y="101" width="23" height="21"/>
+                                <rect key="frame" x="289" y="100" width="22.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,6 +54,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DAU-Ba-sHQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iE7-ol-jWm" secondAttribute="bottom" constant="8" id="RzF-O7-5w9"/>
                             <constraint firstItem="9Av-Eb-r3l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VkQ-hr-yHK"/>
                             <constraint firstItem="iE7-ol-jWm" firstAttribute="top" secondItem="rOB-Qm-DCK" secondAttribute="bottom" constant="8" id="WjH-3Q-VdL"/>
                             <constraint firstItem="iE7-ol-jWm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIN-OM-m3s"/>
@@ -61,7 +62,7 @@
                             <constraint firstItem="rOB-Qm-DCK" firstAttribute="top" secondItem="9Av-Eb-r3l" secondAttribute="bottom" constant="8" id="gcc-60-Hbb"/>
                             <constraint firstItem="DAU-Ba-sHQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2y-Ol-zqS"/>
                             <constraint firstItem="20g-bC-uOY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbL-mb-fNM"/>
-                            <constraint firstItem="DAU-Ba-sHQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lrT-aP-D3f"/>
+                            <constraint firstItem="DAU-Ba-sHQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="250" id="lrT-aP-D3f"/>
                             <constraint firstItem="9Av-Eb-r3l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lrp-Ih-f0r"/>
                             <constraint firstItem="20g-bC-uOY" firstAttribute="top" secondItem="DAU-Ba-sHQ" secondAttribute="bottom" constant="8" id="vpB-CN-LGO"/>
                         </constraints>
