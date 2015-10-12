@@ -16,31 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="200" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-ol-jWm">
-                                <rect key="frame" x="253" y="129" width="94" height="29"/>
-                                <animations/>
-                                <connections>
-                                    <action selector="changeTotValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gut-FV-dhO"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Tots:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Av-Eb-r3l">
-                                <rect key="frame" x="238" y="72" width="123.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Tots: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Av-Eb-r3l">
+                                <rect key="frame" x="231" y="72" width="138" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-Qm-DCK">
-                                <rect key="frame" x="289" y="100" width="22.5" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20g-bC-uOY">
                                 <rect key="frame" x="261" y="408" width="78" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Start Timer"/>
+                                <connections>
+                                    <action selector="startOrStopTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6x-JZ-Poh"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tater Tot" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-Ba-sHQ">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
@@ -50,16 +39,29 @@
                                     <constraint firstAttribute="width" constant="200" id="u5W-Nn-brj"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-eI-JLV">
+                                <rect key="frame" x="245" y="446" width="110.5" height="52"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="200" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-ol-jWm">
+                                <rect key="frame" x="253" y="100" width="94" height="29"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="changeTotValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gut-FV-dhO"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DAU-Ba-sHQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iE7-ol-jWm" secondAttribute="bottom" constant="8" id="RzF-O7-5w9"/>
+                            <constraint firstItem="J8t-eI-JLV" firstAttribute="top" secondItem="20g-bC-uOY" secondAttribute="bottom" constant="8" id="3jn-MO-c7Y"/>
+                            <constraint firstItem="J8t-eI-JLV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ImA-8S-9st"/>
                             <constraint firstItem="9Av-Eb-r3l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VkQ-hr-yHK"/>
-                            <constraint firstItem="iE7-ol-jWm" firstAttribute="top" secondItem="rOB-Qm-DCK" secondAttribute="bottom" constant="8" id="WjH-3Q-VdL"/>
                             <constraint firstItem="iE7-ol-jWm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIN-OM-m3s"/>
-                            <constraint firstItem="rOB-Qm-DCK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dRC-8C-1oQ"/>
-                            <constraint firstItem="rOB-Qm-DCK" firstAttribute="top" secondItem="9Av-Eb-r3l" secondAttribute="bottom" constant="8" id="gcc-60-Hbb"/>
+                            <constraint firstItem="iE7-ol-jWm" firstAttribute="top" secondItem="9Av-Eb-r3l" secondAttribute="bottom" constant="7.5" id="ffI-m8-ufw"/>
                             <constraint firstItem="DAU-Ba-sHQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2y-Ol-zqS"/>
                             <constraint firstItem="20g-bC-uOY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbL-mb-fNM"/>
                             <constraint firstItem="DAU-Ba-sHQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="250" id="lrT-aP-D3f"/>
@@ -75,7 +77,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="totCountLabel" destination="rOB-Qm-DCK" id="nc6-Ad-knJ"/>
+                        <outlet property="startStopButton" destination="20g-bC-uOY" id="xIy-89-gvv"/>
+                        <outlet property="timerFace" destination="J8t-eI-JLV" id="OXe-Rc-c56"/>
+                        <outlet property="totCountLabel" destination="9Av-Eb-r3l" id="DKw-jr-efM"/>
+                        <outlet property="totImage" destination="DAU-Ba-sHQ" id="T3q-bg-6gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Tots Settings" id="DNr-CB-YUR">
                                 <cells>
@@ -140,7 +145,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79I-uf-W6D">
@@ -168,7 +173,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Mr. Pickles Salty Pork VonHausen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wei-XL-ac6">
@@ -196,7 +201,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="2015 by Automattic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="41g-GP-FAk">
