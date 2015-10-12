@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var totalNumberOfTots = 0
+    @IBOutlet var totCountLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        updateTotLabel()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func updateTotLabel() {
+        totCountLabel.text = "\(totalNumberOfTots)"
+    }
+    
+    @IBAction func changeTotValue(sender: UIStepper) {
+        totalNumberOfTots = Int(sender.value)
+        updateTotLabel()
+    }
+    
 
 }
 
