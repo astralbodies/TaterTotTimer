@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var totCountLabel: UILabel!
+    @IBOutlet var totCountStepper: UIStepper!
     @IBOutlet var totImage: UIImageView!
     @IBOutlet var startStopButton: UIButton!
     @IBOutlet var timerFace: UILabel!
@@ -46,10 +47,13 @@ class ViewController: UIViewController {
             timer.invalidate()
             self.timer = nil
             targetDate = nil
+            cancelLocalNotifications()
             totImage.transform = CGAffineTransformIdentity
             degrees = 0.0
             startStopButton.setTitle("Start Timer", forState: .Normal)
             timerFace.hidden = true
+            totCountStepper.hidden = false
+            totCountLabel.hidden = false
             return
         }
         
@@ -58,9 +62,12 @@ class ViewController: UIViewController {
         dateComponents.second = timeForNumberOfTots(totalNumberOfTots)
         targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
         
+        scheduleLocalNotification(targetDate!)
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "refreshTotAndTimer", userInfo: nil, repeats: true)
         startStopButton.setTitle("Stop Timer", forState: .Normal)
         timerFace.hidden = false
+        totCountStepper.hidden = true
+        totCountLabel.hidden = true
         refreshTotAndTimer()
     }
     
@@ -95,8 +102,19 @@ class ViewController: UIViewController {
     }
     
     func scheduleLocalNotification(targetDate: NSDate) {
+        let localNotification = UILocalNotification()
+        localNotification.fireDate = targetDate
+        localNotification.alertTitle = "Tater Tot Timer"
+        localNotification.alertBody = "Your tots are done!"
         
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
+    
+    func cancelLocalNotifications() {
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+    }
+    
+    
 
 }
 
