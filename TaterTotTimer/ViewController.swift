@@ -58,19 +58,30 @@ class ViewController: UIViewController {
         dateComponents.second = timeForNumberOfTots(totalNumberOfTots)
         targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTot", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "refreshTotAndTimer", userInfo: nil, repeats: true)
         startStopButton.setTitle("Stop Timer", forState: .Normal)
         timerFace.hidden = false
-        updateTot()
+        refreshTotAndTimer()
     }
     
-    func updateTot() {
+    func refreshTotAndTimer() {
+        let calendar = NSCalendar.currentCalendar()
+        let dateComponents = calendar.components([.Minute, .Second], fromDate: NSDate(), toDate: targetDate!, options: [])
+        
+        guard targetDate!.timeIntervalSinceReferenceDate > NSDate().timeIntervalSinceReferenceDate else {
+            startOrStopTimer()
+            return
+        }
+        
         degrees += 20
         totImage.transform = CGAffineTransformMakeRotation(CGFloat(degrees * M_PI/180));
         
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = calendar.components([.Minute, .Second], fromDate: NSDate.init(), toDate: targetDate!, options: [])
-        timerFace.text = "\(dateComponents.minute):\(dateComponents.second)"
+        let dateDiff = calendar.dateFromComponents(dateComponents)!
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale.currentLocale()
+        dateFormatter.dateFormat = "mm:ss"
+        let formattedTime = dateFormatter.stringFromDate(dateDiff)
+        timerFace.text = formattedTime
     }
     
     func timeForNumberOfTots(numberOfTots:Int) -> Int {
