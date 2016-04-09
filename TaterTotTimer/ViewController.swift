@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
         
         scheduleLocalNotification(targetDate!)
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "refreshTotAndTimer", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
         startStopButton.setTitle("Stop Timer", forState: .Normal)
         timerFace.hidden = false
         totCountStepper.hidden = true
