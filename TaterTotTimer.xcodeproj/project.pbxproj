@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		559C7594131EE194D2126825 /* Pods_TaterTotTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD291502F58077F92A432DC /* Pods_TaterTotTimerTests.framework */; };
+		57CC2EDE8E993836A3CCC06B /* Pods_TaterTotTimer_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CF3E9618C87E60595D592B /* Pods_TaterTotTimer_WatchKit_Extension.framework */; };
+		7CADA56BCD9FE91B6201EEE2 /* Pods_TaterTotTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB68C7718ADD36CC9FD25FA5 /* Pods_TaterTotTimer.framework */; };
+		936CB3F31D6B660800743C99 /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936CB3F21D6B660800743C99 /* Rx.swift */; };
 		93EDA4B81BC310EF00BCC6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4B71BC310EF00BCC6F2 /* AppDelegate.swift */; };
 		93EDA4BA1BC310EF00BCC6F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4B91BC310EF00BCC6F2 /* ViewController.swift */; };
 		93EDA4BD1BC310EF00BCC6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4BB1BC310EF00BCC6F2 /* Main.storyboard */; };
@@ -22,6 +26,7 @@
 		93EDA4EC1BC310F000BCC6F2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4EB1BC310F000BCC6F2 /* NotificationController.swift */; };
 		93EDA4EE1BC310F000BCC6F2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4ED1BC310F000BCC6F2 /* ComplicationController.swift */; };
 		93EDA4F01BC310F000BCC6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4EF1BC310F000BCC6F2 /* Assets.xcassets */; };
+		DDBE260DB7755C9BB7982BA1 /* Pods_TaterTotTimer_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D808FF600139178BD3C751E /* Pods_TaterTotTimer_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0379EEC14414C52A83D826FF /* Pods-TaterTotTimer WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer WatchKit Extension/Pods-TaterTotTimer WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		1EDB128FA524A86621291288 /* Pods-TaterTotTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer/Pods-TaterTotTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		2CD291502F58077F92A432DC /* Pods_TaterTotTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaterTotTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D00D070A135DC80D4898762 /* Pods-TaterTotTimer WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer WatchKit App/Pods-TaterTotTimer WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		352F45932166652BBBF0CE5B /* Pods-TaterTotTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimerTests/Pods-TaterTotTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D808FF600139178BD3C751E /* Pods_TaterTotTimer_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaterTotTimer_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B8EB5A0B4D6DA057FA61F6 /* Pods-TaterTotTimer WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer WatchKit Extension/Pods-TaterTotTimer WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		8898D1FCAA6F99CBCD5816C5 /* Pods-TaterTotTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimerTests/Pods-TaterTotTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		936CB3F21D6B660800743C99 /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		93EDA4B41BC310EF00BCC6F2 /* TaterTotTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaterTotTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EDA4B71BC310EF00BCC6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93EDA4B91BC310EF00BCC6F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,13 +110,26 @@
 		93EDA4ED1BC310F000BCC6F2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		93EDA4EF1BC310F000BCC6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93EDA4F11BC310F000BCC6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B044F52C39A8CEA5D438FE0F /* Pods-TaterTotTimer WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer WatchKit App/Pods-TaterTotTimer WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		EB68C7718ADD36CC9FD25FA5 /* Pods_TaterTotTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaterTotTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CF3E9618C87E60595D592B /* Pods_TaterTotTimer_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaterTotTimer_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CB89136F6D0A7585BFC875 /* Pods-TaterTotTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaterTotTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaterTotTimer/Pods-TaterTotTimer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		686B8C9BA4AA0A0302C06364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDBE260DB7755C9BB7982BA1 /* Pods_TaterTotTimer_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93EDA4B11BC310EF00BCC6F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CADA56BCD9FE91B6201EEE2 /* Pods_TaterTotTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C7594131EE194D2126825 /* Pods_TaterTotTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +145,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57CC2EDE8E993836A3CCC06B /* Pods_TaterTotTimer_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48CDCF9EC7FA47A20E83F1F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EDB128FA524A86621291288 /* Pods-TaterTotTimer.debug.xcconfig */,
+				F8CB89136F6D0A7585BFC875 /* Pods-TaterTotTimer.release.xcconfig */,
+				2D00D070A135DC80D4898762 /* Pods-TaterTotTimer WatchKit App.debug.xcconfig */,
+				B044F52C39A8CEA5D438FE0F /* Pods-TaterTotTimer WatchKit App.release.xcconfig */,
+				0379EEC14414C52A83D826FF /* Pods-TaterTotTimer WatchKit Extension.debug.xcconfig */,
+				65B8EB5A0B4D6DA057FA61F6 /* Pods-TaterTotTimer WatchKit Extension.release.xcconfig */,
+				8898D1FCAA6F99CBCD5816C5 /* Pods-TaterTotTimerTests.debug.xcconfig */,
+				352F45932166652BBBF0CE5B /* Pods-TaterTotTimerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93EDA4AB1BC310EF00BCC6F2 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +175,8 @@
 				93EDA4D51BC310F000BCC6F2 /* TaterTotTimer WatchKit App */,
 				93EDA4E41BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */,
 				93EDA4B51BC310EF00BCC6F2 /* Products */,
+				48CDCF9EC7FA47A20E83F1F6 /* Pods */,
+				9C0087A319A06A1553592A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +200,7 @@
 				93EDA4BE1BC310EF00BCC6F2 /* Assets.xcassets */,
 				93EDA4C01BC310EF00BCC6F2 /* LaunchScreen.storyboard */,
 				93EDA4C31BC310EF00BCC6F2 /* Info.plist */,
+				936CB3F21D6B660800743C99 /* Rx.swift */,
 			);
 			path = TaterTotTimer;
 			sourceTree = "<group>";
@@ -199,6 +246,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9C0087A319A06A1553592A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB68C7718ADD36CC9FD25FA5 /* Pods_TaterTotTimer.framework */,
+				3D808FF600139178BD3C751E /* Pods_TaterTotTimer_WatchKit_App.framework */,
+				F1CF3E9618C87E60595D592B /* Pods_TaterTotTimer_WatchKit_Extension.framework */,
+				2CD291502F58077F92A432DC /* Pods_TaterTotTimerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,10 +264,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EDA4FC1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer" */;
 			buildPhases = (
+				4E4589C9A440E79FB8779E69 /* [CP] Check Pods Manifest.lock */,
 				93EDA4B01BC310EF00BCC6F2 /* Sources */,
 				93EDA4B11BC310EF00BCC6F2 /* Frameworks */,
 				93EDA4B21BC310EF00BCC6F2 /* Resources */,
 				93EDA4FB1BC310F000BCC6F2 /* Embed Watch Content */,
+				BD11F2C147279FF61F22DE06 /* [CP] Embed Pods Frameworks */,
+				A7FFDB0062ABA4FB1C6EC2C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EDA4FF1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimerTests" */;
 			buildPhases = (
+				0FD662BD9C53CE54775E1CD0 /* [CP] Check Pods Manifest.lock */,
 				93EDA4C41BC310EF00BCC6F2 /* Sources */,
 				93EDA4C51BC310EF00BCC6F2 /* Frameworks */,
 				93EDA4C61BC310EF00BCC6F2 /* Resources */,
+				04AF3268A545D35789254609 /* [CP] Embed Pods Frameworks */,
+				A53144B6838017F4A86CF14C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,8 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EDA4F81BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit App" */;
 			buildPhases = (
+				98D2517E52F8DC6CC26CC1C0 /* [CP] Check Pods Manifest.lock */,
 				93EDA4CF1BC310EF00BCC6F2 /* Resources */,
 				93EDA4F71BC310F000BCC6F2 /* Embed App Extensions */,
+				686B8C9BA4AA0A0302C06364 /* Frameworks */,
+				8A299C0A291A0A972E3FC7E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,9 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EDA4F41BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit Extension" */;
 			buildPhases = (
+				8522EFC56FD128ED8E2D9CA5 /* [CP] Check Pods Manifest.lock */,
 				93EDA4DC1BC310F000BCC6F2 /* Sources */,
 				93EDA4DD1BC310F000BCC6F2 /* Frameworks */,
 				93EDA4DE1BC310F000BCC6F2 /* Resources */,
+				DB9DE0B634343628F8C3D665 /* [CP] Embed Pods Frameworks */,
+				A6CEDFB06B81E8C2AC633952 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,6 +425,174 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04AF3268A545D35789254609 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimerTests/Pods-TaterTotTimerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD662BD9C53CE54775E1CD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E4589C9A440E79FB8779E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8522EFC56FD128ED8E2D9CA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A299C0A291A0A972E3FC7E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimer WatchKit App/Pods-TaterTotTimer WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98D2517E52F8DC6CC26CC1C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A53144B6838017F4A86CF14C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimerTests/Pods-TaterTotTimerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6CEDFB06B81E8C2AC633952 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimer WatchKit Extension/Pods-TaterTotTimer WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7FFDB0062ABA4FB1C6EC2C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimer/Pods-TaterTotTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD11F2C147279FF61F22DE06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimer/Pods-TaterTotTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB9DE0B634343628F8C3D665 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaterTotTimer WatchKit Extension/Pods-TaterTotTimer WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93EDA4B01BC310EF00BCC6F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -362,6 +600,7 @@
 			files = (
 				93EDA4BA1BC310EF00BCC6F2 /* ViewController.swift in Sources */,
 				93EDA4B81BC310EF00BCC6F2 /* AppDelegate.swift in Sources */,
+				936CB3F31D6B660800743C99 /* Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +756,7 @@
 		};
 		93EDA4F51BC310F000BCC6F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0379EEC14414C52A83D826FF /* Pods-TaterTotTimer WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "TaterTotTimer WatchKit Extension/Info.plist";
@@ -532,6 +772,7 @@
 		};
 		93EDA4F61BC310F000BCC6F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B8EB5A0B4D6DA057FA61F6 /* Pods-TaterTotTimer WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "TaterTotTimer WatchKit Extension/Info.plist";
@@ -547,6 +788,7 @@
 		};
 		93EDA4F91BC310F000BCC6F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D00D070A135DC80D4898762 /* Pods-TaterTotTimer WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -563,6 +805,7 @@
 		};
 		93EDA4FA1BC310F000BCC6F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B044F52C39A8CEA5D438FE0F /* Pods-TaterTotTimer WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -579,6 +822,7 @@
 		};
 		93EDA4FD1BC310F000BCC6F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EDB128FA524A86621291288 /* Pods-TaterTotTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TaterTotTimer/Info.plist;
@@ -590,6 +834,7 @@
 		};
 		93EDA4FE1BC310F000BCC6F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8CB89136F6D0A7585BFC875 /* Pods-TaterTotTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TaterTotTimer/Info.plist;
@@ -601,6 +846,7 @@
 		};
 		93EDA5001BC310F000BCC6F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8898D1FCAA6F99CBCD5816C5 /* Pods-TaterTotTimerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TaterTotTimerTests/Info.plist;
@@ -613,6 +859,7 @@
 		};
 		93EDA5011BC310F000BCC6F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 352F45932166652BBBF0CE5B /* Pods-TaterTotTimerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TaterTotTimerTests/Info.plist;
@@ -642,6 +889,7 @@
 				93EDA4F61BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EDA4F81BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +898,7 @@
 				93EDA4FA1BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EDA4FC1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +907,7 @@
 				93EDA4FE1BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EDA4FF1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +916,7 @@
 				93EDA5011BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
