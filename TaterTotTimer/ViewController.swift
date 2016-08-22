@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     var totalNumberOfTots = Variable(5)
     var timerRunning = Variable(false)
-    var timer: NSTimer?
     var targetDate: NSDate?
     var degrees = 0.0
 
@@ -48,8 +47,6 @@ class ViewController: UIViewController {
             }
             .subscribeNext { value in
                 self.startStopButton.setTitle("Start Timer", forState: .Normal)
-                self.timer?.invalidate()
-                self.timer = nil
                 self.targetDate = nil
                 self.cancelLocalNotifications()
                 self.totImage.transform = CGAffineTransformIdentity
@@ -71,15 +68,21 @@ class ViewController: UIViewController {
                 let calendar = NSCalendar.currentCalendar()
                 dateComponents.second = self.timeForNumberOfTots(self.totalNumberOfTots.value)
                 self.targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
-                self.refreshTotAndTimer()
                 
                 self.scheduleLocalNotification(self.targetDate!)
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
                 self.timerFace.hidden = false
                 self.totCountStepper.hidden = true
                 self.totCountLabel.hidden = true
             }
             .addDisposableTo(disposeBag)
+        
+        Observable<Int>
+            .timer(0.0, period: 0.1, scheduler: MainScheduler.instance)
+            .pausable(timerRunning.asObservable())
+            .subscribeNext({ seconds in
+                self.refreshTotAndTimer()
+            })
+            .addDisposableTo(self.disposeBag)
     }
     
     func refreshTotAndTimer() {
