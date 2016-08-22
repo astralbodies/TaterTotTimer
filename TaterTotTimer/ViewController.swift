@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
     @IBOutlet var totCountLabel: UILabel!
@@ -7,7 +8,9 @@ class ViewController: UIViewController {
     @IBOutlet var startStopButton: UIButton!
     @IBOutlet var timerFace: UILabel!
 
-    var totalNumberOfTots = 5
+    let disposeBag = DisposeBag()
+    
+    var totalNumberOfTots = Variable(5)
     var timer: NSTimer?
     var targetDate: NSDate?
     var degrees = 0.0
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeTotValue(sender: UIStepper) {
-        totalNumberOfTots = Int(sender.value)
+        totalNumberOfTots.value = Int(sender.value)
         updateTotLabel()
     }
     
@@ -44,7 +47,7 @@ class ViewController: UIViewController {
         
         let dateComponents = NSDateComponents.init()
         let calendar = NSCalendar.currentCalendar()
-        dateComponents.second = timeForNumberOfTots(totalNumberOfTots)
+        dateComponents.second = timeForNumberOfTots(totalNumberOfTots.value)
         targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
         
         scheduleLocalNotification(targetDate!)
