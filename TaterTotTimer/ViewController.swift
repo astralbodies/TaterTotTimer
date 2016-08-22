@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     var totalNumberOfTots = Variable(5)
+    var timerRunning = Variable(false)
     var timer: NSTimer?
     var targetDate: NSDate?
     var degrees = 0.0
@@ -32,35 +33,44 @@ class ViewController: UIViewController {
                 self.totalNumberOfTots.value = Int(value)
             }
             .addDisposableTo(disposeBag)
-    }
-    
-    @IBAction func startOrStopTimer() {
-        if let timer = timer {
-            timer.invalidate()
-            self.timer = nil
-            targetDate = nil
-            cancelLocalNotifications()
-            totImage.transform = CGAffineTransformIdentity
-            degrees = 0.0
-            startStopButton.setTitle("Start Timer", forState: .Normal)
-            timerFace.hidden = true
-            totCountStepper.hidden = false
-            totCountLabel.hidden = false
-            return
-        }
         
-        let dateComponents = NSDateComponents.init()
-        let calendar = NSCalendar.currentCalendar()
-        dateComponents.second = timeForNumberOfTots(totalNumberOfTots.value)
-        targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
+        startStopButton
+            .rx_tap
+            .subscribeNext {
+                self.timerRunning.value = !self.timerRunning.value
+            }
+            .addDisposableTo(disposeBag)
         
-        scheduleLocalNotification(targetDate!)
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
-        startStopButton.setTitle("Stop Timer", forState: .Normal)
-        timerFace.hidden = false
-        totCountStepper.hidden = true
-        totCountLabel.hidden = true
-        refreshTotAndTimer()
+        timerRunning
+            .asObservable()
+            .subscribeNext { value in
+                if !value {
+                    self.startStopButton.setTitle("Start Timer", forState: .Normal)
+                    self.timer?.invalidate()
+                    self.timer = nil
+                    self.targetDate = nil
+                    self.cancelLocalNotifications()
+                    self.totImage.transform = CGAffineTransformIdentity
+                    self.degrees = 0.0
+                    self.timerFace.hidden = true
+                    self.totCountStepper.hidden = false
+                    self.totCountLabel.hidden = false
+                } else {
+                    self.startStopButton.setTitle("Stop Timer", forState: .Normal)
+                    let dateComponents = NSDateComponents.init()
+                    let calendar = NSCalendar.currentCalendar()
+                    dateComponents.second = self.timeForNumberOfTots(self.totalNumberOfTots.value)
+                    self.targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
+                    self.refreshTotAndTimer()
+
+                    self.scheduleLocalNotification(self.targetDate!)
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
+                    self.timerFace.hidden = false
+                    self.totCountStepper.hidden = true
+                    self.totCountLabel.hidden = true
+                }
+            }
+            .addDisposableTo(disposeBag)
     }
     
     func refreshTotAndTimer() {
@@ -68,7 +78,7 @@ class ViewController: UIViewController {
         let dateComponents = calendar.components([.Minute, .Second], fromDate: NSDate(), toDate: targetDate!, options: [])
         
         guard targetDate!.timeIntervalSinceReferenceDate > NSDate().timeIntervalSinceReferenceDate else {
-            startOrStopTimer()
+            self.timerRunning.value = false
             return
         }
         

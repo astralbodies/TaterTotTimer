@@ -25,9 +25,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20g-bC-uOY">
                                 <rect key="frame" x="261" y="408" width="78" height="30"/>
                                 <state key="normal" title="Start Timer"/>
-                                <connections>
-                                    <action selector="startOrStopTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6x-JZ-Poh"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tater Tot" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-Ba-sHQ">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
