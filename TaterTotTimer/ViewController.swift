@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     @IBOutlet var totCountLabel: UILabel!
@@ -18,16 +19,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateTotLabel()
-    }
-
-    func updateTotLabel() {
-        totCountLabel.text = "Number of Tots: \(totalNumberOfTots)"
-    }
-    
-    @IBAction func changeTotValue(sender: UIStepper) {
-        totalNumberOfTots.value = Int(sender.value)
-        updateTotLabel()
+        totalNumberOfTots
+            .asObservable()
+            .subscribeNext { tots in
+                self.totCountLabel.text = "Number of Tots: \(tots)"
+            }
+            .addDisposableTo(disposeBag)
+        
+        totCountStepper
+            .rx_value
+            .subscribeNext { value in
+                self.totalNumberOfTots.value = Int(value)
+            }
+            .addDisposableTo(disposeBag)
     }
     
     @IBAction func startOrStopTimer() {
