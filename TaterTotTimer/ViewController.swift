@@ -19,6 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let timerIsRunning = timerRunning
+            .asObservable()
+            .map({timerRunning in timerRunning})
+            .shareReplay(1)
+        
+        let timerIsNotRunning = timerRunning
+            .asObservable()
+            .map({timerRunning in !timerRunning})
+            .shareReplay(1)
+        
         totalNumberOfTots
             .asObservable()
             .subscribeNext { tots in
@@ -40,39 +50,30 @@ class ViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
         
-        timerRunning
-            .asObservable()
-            .filter {
-                $0 == false
-            }
-            .subscribeNext { value in
-                self.startStopButton.setTitle("Start Timer", forState: .Normal)
-                self.targetDate = nil
-                self.cancelLocalNotifications()
-                self.totImage.transform = CGAffineTransformIdentity
-                self.degrees = 0.0
-                self.timerFace.hidden = true
-                self.totCountStepper.hidden = false
-                self.totCountLabel.hidden = false
-            }
+        timerIsNotRunning
+            .bindTo(timerFace.rx_hidden)
+            .addDisposableTo(disposeBag)
+        
+        timerIsRunning
+            .bindTo(totCountStepper.rx_hidden)
+            .addDisposableTo(disposeBag)
+        
+        timerIsRunning
+            .bindTo(totCountLabel.rx_hidden)
             .addDisposableTo(disposeBag)
         
         timerRunning
             .asObservable()
-            .filter {
-                $0 == true
-            }
+            .map { $0 ? "Stop Timer" : "Start Timer" }
+            .bindTo(startStopButton.rx_title(.Normal))
+            .addDisposableTo(disposeBag)
+
+        timerIsNotRunning
             .subscribeNext { value in
-                self.startStopButton.setTitle("Stop Timer", forState: .Normal)
-                let dateComponents = NSDateComponents.init()
-                let calendar = NSCalendar.currentCalendar()
-                dateComponents.second = self.timeForNumberOfTots(self.totalNumberOfTots.value)
-                self.targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
-                
-                self.scheduleLocalNotification(self.targetDate!)
-                self.timerFace.hidden = false
-                self.totCountStepper.hidden = true
-                self.totCountLabel.hidden = true
+                self.targetDate = nil
+                self.cancelLocalNotifications()
+                self.totImage.transform = CGAffineTransformIdentity
+                self.degrees = 0.0
             }
             .addDisposableTo(disposeBag)
         
@@ -83,6 +84,18 @@ class ViewController: UIViewController {
                 self.refreshTotAndTimer()
             })
             .addDisposableTo(self.disposeBag)
+        
+        timerIsRunning
+            .subscribeNext { value in
+                let dateComponents = NSDateComponents.init()
+                let calendar = NSCalendar.currentCalendar()
+                dateComponents.second = self.timeForNumberOfTots(self.totalNumberOfTots.value)
+                self.targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
+                
+                self.scheduleLocalNotification(self.targetDate!)
+            }
+            .addDisposableTo(disposeBag)
+
     }
     
     func refreshTotAndTimer() {
