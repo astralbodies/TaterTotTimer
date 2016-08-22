@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  TaterTotTimer
-//
-//  Created by Aaron Douglas on 10/5/15.
-//  Copyright © 2015 Automattic. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -24,15 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         updateTotLabel()
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     func updateTotLabel() {
         totCountLabel.text = "Number of Tots: \(totalNumberOfTots)"
     }
@@ -81,7 +66,7 @@ class ViewController: UIViewController {
         }
         
         degrees += 20
-        totImage.transform = CGAffineTransformMakeRotation(CGFloat(degrees * M_PI/180));
+        totImage.transform = CGAffineTransformMakeRotation(CGFloat(degrees * M_PI/180))
         
         let dateDiff = calendar.dateFromComponents(dateComponents)!
         let dateFormatter = NSDateFormatter()
@@ -93,11 +78,11 @@ class ViewController: UIViewController {
     
     func timeForNumberOfTots(numberOfTots:Int) -> Int {
         if (numberOfTots > 0 && numberOfTots <= 20) {
-            return 22 * 60;
+            return 22 * 60
         } else if (numberOfTots <= 30) {
-            return 24 * 60;
+            return 24 * 60
         } else {
-            return 26 * 60;
+            return 26 * 60
         }
     }
     
@@ -113,8 +98,5 @@ class ViewController: UIViewController {
     func cancelLocalNotifications() {
         UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
-    
-    
-
 }
 
