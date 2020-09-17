@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         totCountLabel.text = "Number of Tots: \(totalNumberOfTots)"
     }
     
-    @IBAction func changeTotValue(sender: UIStepper) {
+    @IBAction func changeTotValue(_ sender: UIStepper) {
         totalNumberOfTots = Int(sender.value)
         updateTotLabel()
     }
@@ -87,16 +87,23 @@ class ViewController: UIViewController {
     }
     
     func scheduleLocalNotification(targetDate: Date) {
-        let localNotification = UILocalNotification()
-        localNotification.fireDate = targetDate
-        localNotification.alertTitle = "Tater Tot Timer"
-        localNotification.alertBody = "Your tots are done!"
-        
-        UIApplication.shared.scheduleLocalNotification(localNotification)
+        let content = UNMutableNotificationContent()
+        content.title = "Tater Tot Timer"
+        content.body = "Your tots are done!"
+
+        let timeInterval = Date().distance(to: targetDate)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            guard error == nil else {
+                return
+            }
+        }
     }
     
     func cancelLocalNotifications() {
-        UIApplication.shared.cancelAllLocalNotifications()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
 }
 
