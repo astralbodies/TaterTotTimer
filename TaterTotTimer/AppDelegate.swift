@@ -16,10 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
-        
-        let notificationTypes:UIUserNotificationType = [.badge, .sound, .alert]
-        let mySettings = UIUserNotificationSettings.init(types: notificationTypes, categories: nil)
-        application.registerUserNotificationSettings(mySettings)
+
+        UNUserNotificationCenter
+            .current()
+            .requestAuthorization(options: [.alert, .badge, .alert]) { granted, error in
+                if granted == true && error == nil {
+                    // We have permission!
+                }
+        }
 
         return true
     }
