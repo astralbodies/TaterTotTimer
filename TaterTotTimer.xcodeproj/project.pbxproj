@@ -13,15 +13,6 @@
 		93EDA4BF1BC310EF00BCC6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4BE1BC310EF00BCC6F2 /* Assets.xcassets */; };
 		93EDA4C21BC310EF00BCC6F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4C01BC310EF00BCC6F2 /* LaunchScreen.storyboard */; };
 		93EDA4CD1BC310EF00BCC6F2 /* TaterTotTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4CC1BC310EF00BCC6F2 /* TaterTotTimerTests.swift */; };
-		93EDA4D21BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 93EDA4D11BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app */; };
-		93EDA4D81BC310F000BCC6F2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4D61BC310F000BCC6F2 /* Interface.storyboard */; };
-		93EDA4DA1BC310F000BCC6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4D91BC310F000BCC6F2 /* Assets.xcassets */; };
-		93EDA4E11BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 93EDA4E01BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		93EDA4E81BC310F000BCC6F2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4E71BC310F000BCC6F2 /* InterfaceController.swift */; };
-		93EDA4EA1BC310F000BCC6F2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4E91BC310F000BCC6F2 /* ExtensionDelegate.swift */; };
-		93EDA4EC1BC310F000BCC6F2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4EB1BC310F000BCC6F2 /* NotificationController.swift */; };
-		93EDA4EE1BC310F000BCC6F2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDA4ED1BC310F000BCC6F2 /* ComplicationController.swift */; };
-		93EDA4F01BC310F000BCC6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EDA4EF1BC310F000BCC6F2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,41 +23,15 @@
 			remoteGlobalIDString = 93EDA4B31BC310EF00BCC6F2;
 			remoteInfo = TaterTotTimer;
 		};
-		93EDA4D31BC310F000BCC6F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 93EDA4AC1BC310EF00BCC6F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93EDA4D01BC310EF00BCC6F2;
-			remoteInfo = "TaterTotTimer WatchKit App";
-		};
-		93EDA4E21BC310F000BCC6F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 93EDA4AC1BC310EF00BCC6F2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 93EDA4DF1BC310F000BCC6F2;
-			remoteInfo = "TaterTotTimer WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		93EDA4F71BC310F000BCC6F2 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				93EDA4E11BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		93EDA4FB1BC310F000BCC6F2 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				93EDA4D21BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,18 +49,6 @@
 		93EDA4C81BC310EF00BCC6F2 /* TaterTotTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaterTotTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EDA4CC1BC310EF00BCC6F2 /* TaterTotTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaterTotTimerTests.swift; sourceTree = "<group>"; };
 		93EDA4CE1BC310EF00BCC6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93EDA4D11BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaterTotTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93EDA4D71BC310F000BCC6F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		93EDA4D91BC310F000BCC6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93EDA4DB1BC310F000BCC6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93EDA4E01BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TaterTotTimer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93EDA4E61BC310F000BCC6F2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		93EDA4E71BC310F000BCC6F2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		93EDA4E91BC310F000BCC6F2 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		93EDA4EB1BC310F000BCC6F2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		93EDA4ED1BC310F000BCC6F2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		93EDA4EF1BC310F000BCC6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93EDA4F11BC310F000BCC6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93EDA4DD1BC310F000BCC6F2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,8 +74,6 @@
 			children = (
 				93EDA4B61BC310EF00BCC6F2 /* TaterTotTimer */,
 				93EDA4CB1BC310EF00BCC6F2 /* TaterTotTimerTests */,
-				93EDA4D51BC310F000BCC6F2 /* TaterTotTimer WatchKit App */,
-				93EDA4E41BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */,
 				93EDA4B51BC310EF00BCC6F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,8 +83,6 @@
 			children = (
 				93EDA4B41BC310EF00BCC6F2 /* TaterTotTimer.app */,
 				93EDA4C81BC310EF00BCC6F2 /* TaterTotTimerTests.xctest */,
-				93EDA4D11BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app */,
-				93EDA4E01BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,38 +109,6 @@
 			path = TaterTotTimerTests;
 			sourceTree = "<group>";
 		};
-		93EDA4D51BC310F000BCC6F2 /* TaterTotTimer WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				93EDA4D61BC310F000BCC6F2 /* Interface.storyboard */,
-				93EDA4D91BC310F000BCC6F2 /* Assets.xcassets */,
-				93EDA4DB1BC310F000BCC6F2 /* Info.plist */,
-			);
-			path = "TaterTotTimer WatchKit App";
-			sourceTree = "<group>";
-		};
-		93EDA4E41BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				93EDA4E71BC310F000BCC6F2 /* InterfaceController.swift */,
-				93EDA4E91BC310F000BCC6F2 /* ExtensionDelegate.swift */,
-				93EDA4EB1BC310F000BCC6F2 /* NotificationController.swift */,
-				93EDA4ED1BC310F000BCC6F2 /* ComplicationController.swift */,
-				93EDA4EF1BC310F000BCC6F2 /* Assets.xcassets */,
-				93EDA4F11BC310F000BCC6F2 /* Info.plist */,
-				93EDA4E51BC310F000BCC6F2 /* Supporting Files */,
-			);
-			path = "TaterTotTimer WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		93EDA4E51BC310F000BCC6F2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				93EDA4E61BC310F000BCC6F2 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,7 +124,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				93EDA4D41BC310F000BCC6F2 /* PBXTargetDependency */,
 			);
 			name = TaterTotTimer;
 			productName = TaterTotTimer;
@@ -239,47 +148,13 @@
 			productReference = 93EDA4C81BC310EF00BCC6F2 /* TaterTotTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		93EDA4D01BC310EF00BCC6F2 /* TaterTotTimer WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93EDA4F81BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit App" */;
-			buildPhases = (
-				93EDA4CF1BC310EF00BCC6F2 /* Resources */,
-				93EDA4F71BC310F000BCC6F2 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				93EDA4E31BC310F000BCC6F2 /* PBXTargetDependency */,
-			);
-			name = "TaterTotTimer WatchKit App";
-			productName = "TaterTotTimer WatchKit App";
-			productReference = 93EDA4D11BC310F000BCC6F2 /* TaterTotTimer WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		93EDA4DF1BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 93EDA4F41BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit Extension" */;
-			buildPhases = (
-				93EDA4DC1BC310F000BCC6F2 /* Sources */,
-				93EDA4DD1BC310F000BCC6F2 /* Frameworks */,
-				93EDA4DE1BC310F000BCC6F2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TaterTotTimer WatchKit Extension";
-			productName = "TaterTotTimer WatchKit Extension";
-			productReference = 93EDA4E01BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		93EDA4AC1BC310EF00BCC6F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = Automattic;
 				TargetAttributes = {
 					93EDA4B31BC310EF00BCC6F2 = {
@@ -289,17 +164,11 @@
 						CreatedOnToolsVersion = 7.0.1;
 						TestTargetID = 93EDA4B31BC310EF00BCC6F2;
 					};
-					93EDA4D01BC310EF00BCC6F2 = {
-						CreatedOnToolsVersion = 7.0.1;
-					};
-					93EDA4DF1BC310F000BCC6F2 = {
-						CreatedOnToolsVersion = 7.0.1;
-					};
 				};
 			};
 			buildConfigurationList = 93EDA4AF1BC310EF00BCC6F2 /* Build configuration list for PBXProject "TaterTotTimer" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -312,8 +181,6 @@
 			targets = (
 				93EDA4B31BC310EF00BCC6F2 /* TaterTotTimer */,
 				93EDA4C71BC310EF00BCC6F2 /* TaterTotTimerTests */,
-				93EDA4D01BC310EF00BCC6F2 /* TaterTotTimer WatchKit App */,
-				93EDA4DF1BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -333,23 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93EDA4CF1BC310EF00BCC6F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93EDA4DA1BC310F000BCC6F2 /* Assets.xcassets in Resources */,
-				93EDA4D81BC310F000BCC6F2 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93EDA4DE1BC310F000BCC6F2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93EDA4F01BC310F000BCC6F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,17 +223,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93EDA4DC1BC310F000BCC6F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93EDA4EC1BC310F000BCC6F2 /* NotificationController.swift in Sources */,
-				93EDA4EE1BC310F000BCC6F2 /* ComplicationController.swift in Sources */,
-				93EDA4EA1BC310F000BCC6F2 /* ExtensionDelegate.swift in Sources */,
-				93EDA4E81BC310F000BCC6F2 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -391,16 +230,6 @@
 			isa = PBXTargetDependency;
 			target = 93EDA4B31BC310EF00BCC6F2 /* TaterTotTimer */;
 			targetProxy = 93EDA4C91BC310EF00BCC6F2 /* PBXContainerItemProxy */;
-		};
-		93EDA4D41BC310F000BCC6F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93EDA4D01BC310EF00BCC6F2 /* TaterTotTimer WatchKit App */;
-			targetProxy = 93EDA4D31BC310F000BCC6F2 /* PBXContainerItemProxy */;
-		};
-		93EDA4E31BC310F000BCC6F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 93EDA4DF1BC310F000BCC6F2 /* TaterTotTimer WatchKit Extension */;
-			targetProxy = 93EDA4E21BC310F000BCC6F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,14 +250,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		93EDA4D61BC310F000BCC6F2 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93EDA4D71BC310F000BCC6F2 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -436,17 +257,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -468,11 +300,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -481,17 +314,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -507,73 +351,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		93EDA4F51BC310F000BCC6F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				INFOPLIST_FILE = "TaterTotTimer WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.TaterTotTimer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		93EDA4F61BC310F000BCC6F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				INFOPLIST_FILE = "TaterTotTimer WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.TaterTotTimer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		93EDA4F91BC310F000BCC6F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = TaterTotTimer_WatchKit_Extension;
-				INFOPLIST_FILE = "TaterTotTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.TaterTotTimer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		93EDA4FA1BC310F000BCC6F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = TaterTotTimer_WatchKit_Extension;
-				INFOPLIST_FILE = "TaterTotTimer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.TaterTotTimer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -635,22 +419,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93EDA4F41BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93EDA4F51BC310F000BCC6F2 /* Debug */,
-				93EDA4F61BC310F000BCC6F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		93EDA4F81BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				93EDA4F91BC310F000BCC6F2 /* Debug */,
-				93EDA4FA1BC310F000BCC6F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		93EDA4FC1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -658,6 +426,7 @@
 				93EDA4FE1BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EDA4FF1BC310F000BCC6F2 /* Build configuration list for PBXNativeTarget "TaterTotTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +435,7 @@
 				93EDA5011BC310F000BCC6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

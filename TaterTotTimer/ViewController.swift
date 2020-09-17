@@ -1,4 +1,5 @@
 import UIKit
+import CoreGraphics
 
 class ViewController: UIViewController {
     @IBOutlet var totCountLabel: UILabel!
@@ -8,8 +9,8 @@ class ViewController: UIViewController {
     @IBOutlet var timerFace: UILabel!
 
     var totalNumberOfTots = 5
-    var timer: NSTimer?
-    var targetDate: NSDate?
+    var timer: Timer?
+    var targetDate: Date?
     var degrees = 0.0
 
     override func viewDidLoad() {
@@ -33,32 +34,31 @@ class ViewController: UIViewController {
             self.timer = nil
             targetDate = nil
             cancelLocalNotifications()
-            totImage.transform = CGAffineTransformIdentity
+            totImage.transform = .identity
             degrees = 0.0
-            startStopButton.setTitle("Start Timer", forState: .Normal)
-            timerFace.hidden = true
-            totCountStepper.hidden = false
-            totCountLabel.hidden = false
+            startStopButton.setTitle("Start Timer", for: .normal)
+            timerFace.isHidden = true
+            totCountStepper.isHidden = false
+            totCountLabel.isHidden = false
             return
         }
         
-        let dateComponents = NSDateComponents.init()
-        let calendar = NSCalendar.currentCalendar()
-        dateComponents.second = timeForNumberOfTots(totalNumberOfTots)
-        targetDate = calendar.dateByAddingComponents(dateComponents, toDate: NSDate.init(), options: [])
+        let dateComponents = DateComponents(second: timeForNumberOfTots(totalNumberOfTots))
+        let calendar = Calendar.current
+        targetDate = calendar.date(byAdding: dateComponents, to: Date())
         
-        scheduleLocalNotification(targetDate!)
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
-        startStopButton.setTitle("Stop Timer", forState: .Normal)
-        timerFace.hidden = false
-        totCountStepper.hidden = true
-        totCountLabel.hidden = true
+        scheduleLocalNotification(targetDate: targetDate!)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.refreshTotAndTimer), userInfo: nil, repeats: true)
+        startStopButton.setTitle("Stop Timer", for: .normal)
+        timerFace.isHidden = false
+        totCountStepper.isHidden = true
+        totCountLabel.isHidden = true
         refreshTotAndTimer()
     }
     
-    func refreshTotAndTimer() {
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = calendar.components([.Minute, .Second], fromDate: NSDate(), toDate: targetDate!, options: [])
+    @objc func refreshTotAndTimer() {
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.minute, .second], from: Date(), to: targetDate!)
         
         guard targetDate!.timeIntervalSinceReferenceDate > NSDate().timeIntervalSinceReferenceDate else {
             startOrStopTimer()
@@ -66,17 +66,17 @@ class ViewController: UIViewController {
         }
         
         degrees += 20
-        totImage.transform = CGAffineTransformMakeRotation(CGFloat(degrees * M_PI/180))
+        totImage.transform = .init(rotationAngle: CGFloat(degrees * .pi/180))
         
-        let dateDiff = calendar.dateFromComponents(dateComponents)!
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.locale = NSLocale.currentLocale()
+        let dateDiff = calendar.date(from: dateComponents)!
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = "mm:ss"
-        let formattedTime = dateFormatter.stringFromDate(dateDiff)
+        let formattedTime = dateFormatter.string(from: dateDiff)
         timerFace.text = formattedTime
     }
     
-    func timeForNumberOfTots(numberOfTots:Int) -> Int {
+    func timeForNumberOfTots(_ numberOfTots:Int) -> Int {
         if (numberOfTots > 0 && numberOfTots <= 20) {
             return 22 * 60
         } else if (numberOfTots <= 30) {
@@ -86,17 +86,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func scheduleLocalNotification(targetDate: NSDate) {
+    func scheduleLocalNotification(targetDate: Date) {
         let localNotification = UILocalNotification()
         localNotification.fireDate = targetDate
         localNotification.alertTitle = "Tater Tot Timer"
         localNotification.alertBody = "Your tots are done!"
         
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        UIApplication.shared.scheduleLocalNotification(localNotification)
     }
     
     func cancelLocalNotifications() {
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        UIApplication.shared.cancelAllLocalNotifications()
     }
 }
 
